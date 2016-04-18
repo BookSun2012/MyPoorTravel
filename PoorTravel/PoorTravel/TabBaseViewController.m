@@ -8,9 +8,11 @@
 
 #import "TabBaseViewController.h"
 #import "MoreSubjectTableViewCell.h"
+#import "WebViewController.h"
 #import "MoreSubject.h"
 #import "LoadNetData.h"
 #import "Header.h"
+#import "ObjectViewController.h"
 @interface TabBaseViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView *tabView;
@@ -27,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     _Source = [NSMutableArray array];
     _page = 1;
     [self loadNetData];
@@ -98,61 +99,69 @@
     
 }
 
-#pragma mark - scroller的代理方法
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //刷新动画
-    if (indexPath.row == self.Source.count - 1) {
-       
-        self.tabView.tableFooterView = [self createImageArrayWithNmae:@"DOVE" count:19];
-        dispatch_queue_t quene = dispatch_get_global_queue(0, 0);
-        dispatch_queue_t mainQuene = dispatch_get_main_queue();
-        
-        dispatch_async(quene, ^{
-            
-            _page ++;
-            [self loadNetData];
-            sleep(1);
-            dispatch_async(mainQuene, ^{
-                
-                
-                self.tabView.tableFooterView = nil;
-            });
-        
-        });
-}
-    
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WebViewController *VC = [[WebViewController alloc]init];
+    SubjectData *model = _Source[indexPath.row];
+    VC.url = [NSURL URLWithString:model.url];
+    VC.titleOne = model.title;
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
-//创建image数组
-
-- (UIView*)createImageArrayWithNmae:(NSString*)imageNmae count:(NSInteger)count {
-
-    NSMutableArray *arr = [NSMutableArray array];
-    
-    for (int i = 1; i < count; i ++) {
-        
-        NSString *image = [NSString stringWithFormat:@"%@%.2d",imageNmae,i];
-        
-        UIImage *images = [UIImage imageNamed:image];
-        [arr addObject:images];
-    }
-    
-    
-    UIView *footerView = [[UIImageView alloc] initWithFrame:
-                          CGRectMake(0, 0, self.tabView.frame.size.width, self.tabView.frame.size.height)];
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 0, 200, footerView.frame.size.height)];
-    
-    imageView.animationImages = arr;
-    imageView.animationDuration = 1.0;
-    imageView.animationRepeatCount = 0;
-    [imageView startAnimating];
-    
-    [footerView addSubview:imageView];
-    
-    return footerView;
-}
+//#pragma mark - scroller的代理方法
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    //刷新动画
+//    if (indexPath.row == self.Source.count - 1) {
+//       
+//        self.tabView.tableFooterView = [self createImageArrayWithNmae:@"DOVE" count:19];
+//        dispatch_queue_t quene = dispatch_get_global_queue(0, 0);
+//        dispatch_queue_t mainQuene = dispatch_get_main_queue();
+//        
+//        dispatch_async(quene, ^{
+//            
+//            _page ++;
+//            [self loadNetData];
+//            sleep(1);
+//            dispatch_async(mainQuene, ^{
+//                
+//                
+//                self.tabView.tableFooterView = nil;
+//            });
+//        
+//        });
+//}
+//    
+//    
+//}
+//
+////创建image数组
+//
+//- (UIView*)createImageArrayWithNmae:(NSString*)imageNmae count:(NSInteger)count {
+//
+//    NSMutableArray *arr = [NSMutableArray array];
+//    
+//    for (int i = 1; i < count; i ++) {
+//        
+//        NSString *image = [NSString stringWithFormat:@"%@%.2d",imageNmae,i];
+//        
+//        UIImage *images = [UIImage imageNamed:image];
+//        [arr addObject:images];
+//    }
+//    
+//    
+//    UIView *footerView = [[UIImageView alloc] initWithFrame:
+//                          CGRectMake(0, 0, self.tabView.frame.size.width, self.tabView.frame.size.height)];
+//    
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 0, 200, footerView.frame.size.height)];
+//    
+//    imageView.animationImages = arr;
+//    imageView.animationDuration = 1.0;
+//    imageView.animationRepeatCount = 0;
+//    [imageView startAnimating];
+//    
+//    [footerView addSubview:imageView];
+//    
+//    return footerView;
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

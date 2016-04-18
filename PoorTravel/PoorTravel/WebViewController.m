@@ -20,6 +20,7 @@
     [self indicator];
     [_indicator startAnimating];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    self.title = self.titleOne;
 }
 - (void)createWebView {
     UIWebView *webView = [[UIWebView alloc] initWithFrame:

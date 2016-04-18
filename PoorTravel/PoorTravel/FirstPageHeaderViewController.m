@@ -80,6 +80,7 @@
     [_scrollerView addSubview:_gunDong];
        [self setImage];
 }
+//发现下一站
 - (void)configData {
    
     _gunDong.imageArray =(NSMutableArray*)_model.data.slide;
@@ -186,7 +187,7 @@
     self.lvTuZhong.layer.cornerRadius = 25;
     
     UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.frame = CGRectMake(10, 10, self.lvTuZhong.frame.size.width - 20, self.lvTuZhong.frame.size.width -20);
+    imageView.frame = CGRectMake(0, 10, self.lvTuZhong.frame.size.width, self.lvTuZhong.frame.size.width -20);
     
     imageView.layer.masksToBounds = YES;
     imageView.layer.cornerRadius = 30;

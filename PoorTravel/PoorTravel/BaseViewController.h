@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BaseViewController : UIViewController
+#import "LowestViewController.h"
+@interface BaseViewController : LowestViewController
 
 @end

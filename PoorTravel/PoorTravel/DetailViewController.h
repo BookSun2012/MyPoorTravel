@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DetailViewController : UIViewController
+#import "BaseViewController.h"
+@interface DetailViewController : BaseViewController
 
 @property (nonatomic,strong)NSString *hotCityName;
 @property (nonatomic,assign)NSInteger channleID;

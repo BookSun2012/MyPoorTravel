@@ -52,6 +52,7 @@
 - (void)createScrollerView {
     _scrollerView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     _scrollerView.scrollEnabled = NO;
+    _scrollerView.bounces = NO;
     _scrollerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_scrollerView];
 }
@@ -100,9 +101,7 @@
 
 //上面的滚动视图
 - (void)createHeaderView {
-    
-   
-    
+
     _first = [[FirstPageHeaderViewController alloc] init];
     [self addChildViewController:_first];
     [self.scrollerView addSubview:_first.view];
@@ -111,7 +110,7 @@
     
      UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
     _discount_subject = [[UIImageView alloc] initWithFrame:
-                         CGRectMake(10, Y - 140, self.view.frame.size.width-20, 150)];
+                         CGRectMake(0, Y - 140, self.view.frame.size.width, 150)];
     [_discount_subject addGestureRecognizer:tap];
     _discount_subject.userInteractionEnabled = YES;
     [tap addTarget:self action:@selector(tapTap:)];
@@ -136,7 +135,7 @@
     
     CGFloat Y = CGRectGetMaxY(_discount_subject.frame);
     _collectionView = [[UICollectionView alloc] initWithFrame:
-                       CGRectMake(10, Y + 10, self.view.frame.size.width - 20, 400)
+                       CGRectMake(0, Y + 10, self.view.frame.size.width, 400)
                                          collectionViewLayout:fly];
     
     _collectionView.delegate = self;
@@ -150,10 +149,10 @@
           forCellWithReuseIdentifier:@"cellID"];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame = CGRectMake(10, CGRectGetMaxY(_collectionView.frame),
-                           self.view.frame.size.width - 20, 44);
+    btn.frame = CGRectMake(0, CGRectGetMaxY(_collectionView.frame),
+                           self.view.frame.size.width , 44);
     btn.titleLabel.font = [UIFont systemFontOfSize:15];
-    [btn setTitle:@"查看全部折扣" forState:
+    [btn setTitle:@"查看******全部折扣" forState:
                                 UIControlStateNormal];
     [btn addTarget:self action:@selector(moreSubject:) forControlEvents:UIControlEventTouchUpInside];
     btn.tag = 200;
@@ -175,7 +174,7 @@
     CGFloat Y = CGRectGetMaxY(btn.frame);
     
     UILabel *view = [[UILabel alloc] initWithFrame:
-                     CGRectMake(10, Y + 10, _scrollerView.frame.size.width - 20, 44)];
+                     CGRectMake(0, Y + 10, _scrollerView.frame.size.width , 44)];
     view.text = @" 查看热门游记";
     view.textColor = [UIColor grayColor];
     
@@ -191,7 +190,7 @@
     [_scrollerView addSubview:la];
     
     
-    _hotView = [[HotTravelTabView alloc] initWithFrame:CGRectMake(10,0, self.view.frame.size.width - 20, self.view.frame.size.height)
+    _hotView = [[HotTravelTabView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width , self.view.frame.size.height)
                                                                   style:UITableViewStylePlain];
     _hotView.tableHeaderView = _scrollerView;
     
@@ -221,8 +220,9 @@
     return cell;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
+    
     return 1;
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

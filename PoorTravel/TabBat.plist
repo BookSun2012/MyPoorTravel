@@ -14,7 +14,7 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>DestationViewController</string>
+		<string>VideoViewController</string>
 		<key>normalImageName</key>
 		<string>tab_nearest_normal</string>
 		<key>selectImageName</key>
@@ -34,7 +34,7 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>VideoViewController</string>
+		<string>DestationViewController</string>
 		<key>normalImageName</key>
 		<string>tabbar_appfree</string>
 		<key>selectImageName</key>

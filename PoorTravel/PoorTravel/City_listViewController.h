@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface City_listViewController : UIViewController
+#import "BaseViewController.h"
+@interface City_listViewController : BaseViewController
 @property (nonatomic,strong)NSString *channlID;
 @end

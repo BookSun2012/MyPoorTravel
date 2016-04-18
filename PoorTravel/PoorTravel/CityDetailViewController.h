@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CityDetailViewController : UIViewController
+#import "BaseViewController.h"
+@interface CityDetailViewController : BaseViewController
 @property (nonatomic,strong)NSString *url;
 @end

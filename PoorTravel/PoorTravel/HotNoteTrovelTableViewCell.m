@@ -31,9 +31,9 @@
     
     _userName.text = model.username;
     
-    _viewsLabe.text = [NSString stringWithFormat:@"👀 %ld",model.views];
+    _viewsLabe.text = [NSString stringWithFormat:@"查看 %ld",model.views];
     
-    _replysLabel.text = [NSString stringWithFormat:@"💼 %@",model.replys];
+    _replysLabel.text = [NSString stringWithFormat:@"评论 %@",model.replys];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

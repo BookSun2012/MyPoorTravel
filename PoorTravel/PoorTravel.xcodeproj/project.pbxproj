@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98E736911CB7412F00D18E79 /* LowestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E736901CB7412F00D18E79 /* LowestViewController.m */; };
+		98E736971CB743EB00D18E79 /* UIFont+CustomFount.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E736961CB743EB00D18E79 /* UIFont+CustomFount.m */; };
+		98E7369A1CB7444500D18E79 /* UIColor+CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E736991CB7444500D18E79 /* UIColor+CustomColor.m */; };
+		98ED36B51CB50DBB0015F35D /* ObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98ED36B41CB50DBB0015F35D /* ObjectViewController.m */; };
 		BC01ABD11C93B0880044062E /* IdeaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01ABD01C93B0880044062E /* IdeaModel.m */; };
 		BC01ABD51C93B11D0044062E /* IdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01ABD41C93B11D0044062E /* IdeaViewController.m */; };
 		BC01ABD81C93B1430044062E /* IdeaTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01ABD71C93B1430044062E /* IdeaTabView.m */; };
@@ -592,6 +596,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98E7368F1CB7412E00D18E79 /* LowestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowestViewController.h; sourceTree = "<group>"; };
+		98E736901CB7412F00D18E79 /* LowestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowestViewController.m; sourceTree = "<group>"; };
+		98E736951CB743EB00D18E79 /* UIFont+CustomFount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CustomFount.h"; sourceTree = "<group>"; };
+		98E736961CB743EB00D18E79 /* UIFont+CustomFount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CustomFount.m"; sourceTree = "<group>"; };
+		98E736981CB7444500D18E79 /* UIColor+CustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColor.h"; sourceTree = "<group>"; };
+		98E736991CB7444500D18E79 /* UIColor+CustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColor.m"; sourceTree = "<group>"; };
+		98ED36B31CB50DBB0015F35D /* ObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectViewController.h; sourceTree = "<group>"; };
+		98ED36B41CB50DBB0015F35D /* ObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectViewController.m; sourceTree = "<group>"; };
 		BC01ABCF1C93B0880044062E /* IdeaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaModel.h; sourceTree = "<group>"; };
 		BC01ABD01C93B0880044062E /* IdeaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaModel.m; sourceTree = "<group>"; };
 		BC01ABD31C93B11D0044062E /* IdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaViewController.h; sourceTree = "<group>"; };
@@ -1335,6 +1347,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98ED36B21CB50D4D0015F35D /* 专题列表 */ = {
+			isa = PBXGroup;
+			children = (
+				98ED36B31CB50DBB0015F35D /* ObjectViewController.h */,
+				98ED36B41CB50DBB0015F35D /* ObjectViewController.m */,
+			);
+			name = "专题列表";
+			sourceTree = "<group>";
+		};
 		BC01ABCA1C93A4B80044062E /* Hmepage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1397,7 +1418,7 @@
 			name = IdeaModel;
 			sourceTree = "<group>";
 		};
-		BC01ABCE1C93A6070044062E /* IdeaController */ = {
+		BC01ABCE1C93A6070044062E /* 看锦囊 */ = {
 			isa = PBXGroup;
 			children = (
 				BC01ABD31C93B11D0044062E /* IdeaViewController.h */,
@@ -1405,7 +1426,7 @@
 				BC67C8061C950B8000761290 /* IdeaDetailViewController.h */,
 				BC67C8071C950B8000761290 /* IdeaDetailViewController.m */,
 			);
-			name = IdeaController;
+			name = "看锦囊";
 			sourceTree = "<group>";
 		};
 		BC01ABD21C93B0FA0044062E /* IdeaView */ = {
@@ -1606,10 +1627,10 @@
 		BC02C16F1C910C2F00948A01 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC0B21031C9A807B00AE6867 /* traveling */,
-				BC0B21021C9A806300AE6867 /* orderHotel  */,
-				BCB8568D1C96DA8D0011DF1E /* discountController */,
-				BC01ABCE1C93A6070044062E /* IdeaController */,
+				BC0B21031C9A807B00AE6867 /* 旅途中 */,
+				BC0B21021C9A806300AE6867 /* 定酒店 */,
+				BCB8568D1C96DA8D0011DF1E /* 抢折扣 */,
+				BC01ABCE1C93A6070044062E /* 看锦囊 */,
 				BC01ABCB1C93A4E00044062E /* HomaController */,
 			);
 			name = Controller;
@@ -1618,6 +1639,7 @@
 		BC02C1701C910C3300948A01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98ED36B21CB50D4D0015F35D /* 专题列表 */,
 				BCB8568C1C96DA830011DF1E /* discountView */,
 				BC01ABD21C93B0FA0044062E /* IdeaView */,
 				BC01ABCA1C93A4B80044062E /* Hmepage */,
@@ -1644,22 +1666,22 @@
 			name = NetData;
 			sourceTree = "<group>";
 		};
-		BC0B21021C9A806300AE6867 /* orderHotel  */ = {
+		BC0B21021C9A806300AE6867 /* 定酒店 */ = {
 			isa = PBXGroup;
 			children = (
 				BC0B21411C9AA2CC00AE6867 /* OrderViewController.h */,
 				BC0B21421C9AA2CC00AE6867 /* OrderViewController.m */,
 			);
-			name = "orderHotel ";
+			name = "定酒店";
 			sourceTree = "<group>";
 		};
-		BC0B21031C9A807B00AE6867 /* traveling */ = {
+		BC0B21031C9A807B00AE6867 /* 旅途中 */ = {
 			isa = PBXGroup;
 			children = (
 				BC0B21441C9AA2DD00AE6867 /* TravelingViewController.h */,
 				BC0B21451C9AA2DD00AE6867 /* TravelingViewController.m */,
 			);
-			name = traveling;
+			name = "旅途中";
 			sourceTree = "<group>";
 		};
 		BC1792D21C97A0F000819521 /* UMSocial_Sdk_5.0 */ = {
@@ -1799,8 +1821,14 @@
 				BC38B3F81C903DFC00C80C14 /* LaunchScreen.storyboard */,
 				BC38B6F21C905D2E00C80C14 /* BaseViewController.h */,
 				BC38B6F31C905D2E00C80C14 /* BaseViewController.m */,
+				98E7368F1CB7412E00D18E79 /* LowestViewController.h */,
+				98E736901CB7412F00D18E79 /* LowestViewController.m */,
 				BC38B72D1C90633B00C80C14 /* MainBarViewController.h */,
 				BC38B72E1C90633B00C80C14 /* MainBarViewController.m */,
+				98E736951CB743EB00D18E79 /* UIFont+CustomFount.h */,
+				98E736961CB743EB00D18E79 /* UIFont+CustomFount.m */,
+				98E736981CB7444500D18E79 /* UIColor+CustomColor.h */,
+				98E736991CB7444500D18E79 /* UIColor+CustomColor.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -2277,13 +2305,13 @@
 			name = discountView;
 			sourceTree = "<group>";
 		};
-		BCB8568D1C96DA8D0011DF1E /* discountController */ = {
+		BCB8568D1C96DA8D0011DF1E /* 抢折扣 */ = {
 			isa = PBXGroup;
 			children = (
 				BCB8569C1C96E6960011DF1E /* DiscountViewController.h */,
 				BCB8569D1C96E6960011DF1E /* DiscountViewController.m */,
 			);
-			name = discountController;
+			name = "抢折扣";
 			sourceTree = "<group>";
 		};
 		BCFB7FB91C99917F0001CB4D /* FMDB */ = {
@@ -3051,6 +3079,7 @@
 				BC02C1741C910C9C00948A01 /* HomePageScrollerModel.m in Sources */,
 				BCFC6CF01C9F8FE000CC2AE3 /* MASViewAttribute.m in Sources */,
 				BC02C1881C911D7D00948A01 /* FirstPageHeaderViewController.m in Sources */,
+				98E736971CB743EB00D18E79 /* UIFont+CustomFount.m in Sources */,
 				BCFC6CCD1C9F8F8700CC2AE3 /* LocalModel.m in Sources */,
 				BCFC6CEF1C9F8FE000CC2AE3 /* MASLayoutConstraint.m in Sources */,
 				BCFC6CEE1C9F8FE000CC2AE3 /* MASConstraintMaker.m in Sources */,
@@ -3070,6 +3099,7 @@
 				BC67C8051C95068F00761290 /* IdeaDetailModel.m in Sources */,
 				BCFC6CCA1C9F8F8700CC2AE3 /* LastCityListCell.m in Sources */,
 				BCFC6CF11C9F8FE000CC2AE3 /* MASViewConstraint.m in Sources */,
+				98E736911CB7412F00D18E79 /* LowestViewController.m in Sources */,
 				BC02C14C1C90F8A300948A01 /* JSONModel.m in Sources */,
 				BC38B72F1C90633B00C80C14 /* MainBarViewController.m in Sources */,
 				BCFC6CC51C9F8F8700CC2AE3 /* FirstModel.m in Sources */,
@@ -3090,6 +3120,8 @@
 				BC5662B31C964A91001708DD /* DownloadSection.m in Sources */,
 				BCA7DFD01C92F102003D5ED4 /* HotNoteTrovelTableViewCell.m in Sources */,
 				BC02C12B1C90F84300948A01 /* UIImage+WebP.m in Sources */,
+				98E7369A1CB7444500D18E79 /* UIColor+CustomColor.m in Sources */,
+				98ED36B51CB50DBB0015F35D /* ObjectViewController.m in Sources */,
 				BCFB7FD31C999BE40001CB4D /* MyAnnotionView.m in Sources */,
 				BCB856971C96DF550011DF1E /* DiscountCollectionViewCell.m in Sources */,
 				BCFC6CD31C9F8F8700CC2AE3 /* VideoViewController.m in Sources */,

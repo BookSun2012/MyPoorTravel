@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "FirstModel.h"
-@interface TheHotPlaceCollectionViewController : UIViewController
+@interface TheHotPlaceCollectionViewController : BaseViewController
 @property (nonatomic,strong)NSArray * dataSouce;
 @property (nonatomic,assign)NSInteger num;
 @end

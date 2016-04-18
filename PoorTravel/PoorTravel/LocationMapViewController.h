@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LocationMapViewController : UIViewController
+#import "BaseViewController.h"
+@interface LocationMapViewController : BaseViewController
 @property (nonatomic,strong)NSString *url;
 @end
